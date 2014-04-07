@@ -1,0 +1,27 @@
+{
+  "name": "foto-foto",
+  "version": "0.0.1",
+  "description": "A simple photo handling and versioning site in KoaJs",
+  "main": "app.js",
+  "scripts": {
+    "test": "./node_module/mocha/bin/mocha -d bdd -r spec -b"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marcusoftnet/foto-foto.git"
+  },
+  "keywords": [
+    "koa",
+    "node"
+  ],
+  "author": "@marcusoftnet",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marcusoftnet/foto-foto/issues"
+  },
+  "homepage": "https://github.com/marcusoftnet/foto-foto",
+  "dependencies" :{
+    "koa": "^0.5.0"
+    },
+  "devDependencies" :{ }
+}
