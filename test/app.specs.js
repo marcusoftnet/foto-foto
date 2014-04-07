@@ -1,6 +1,5 @@
 var app = require('../app');
 var should = require('should');
-
 var request = require('supertest').agent(app.listen());
 
 describe("The foto-foto", function () {

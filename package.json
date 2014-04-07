@@ -23,7 +23,10 @@
   "homepage": "https://github.com/marcusoftnet/foto-foto",
   "dependencies": {
     "koa": "*",
-    "koa-static": "^1.4.0"
+    "koa-static": "^1.4.0",
+    "koa-logger": "^1.1.0",
+    "co-busboy": "^0.1.0",
+    "koa-route": "^1.0.2"
   },
   "devDependencies": {
     "mocha" : "*",
