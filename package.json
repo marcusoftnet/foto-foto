@@ -4,7 +4,8 @@
   "description": "A simple photo handling and versioning site in KoaJs",
   "main": "app.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha --harmony-generators -u bdd -R spec -b"
+    "test": "./node_modules/mocha/bin/mocha --harmony-generators -u bdd -R spec -b",
+    "start": "./node_modules/nodemon/bin/nodemon.js --harmony app.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
   "devDependencies": {
     "mocha" : "*",
     "should" : "*",
-    "supertest" : "*"
+    "supertest" : "*",
+    "nodemon" : "*"
   }
 }
