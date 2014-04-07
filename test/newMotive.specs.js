@@ -22,6 +22,13 @@ describe('Creating new motives', function () {
 			.expect({ message: 'Motive name is required' })
 			.end(done);
 	});
-	it('requires a motive file');
+	it('requires a motive file', function (done) {
+		request
+			.post(NEW_MOTIVE_URL)
+			.field('motiveName', 'anUniqueName')
+			.expect(400)
+			.expect({ message: 'Motive file is required' })
+			.end(done);
+	});
 	it('the motive name needs to be unique in the database');
 });
