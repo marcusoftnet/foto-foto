@@ -4,7 +4,7 @@
   "description": "A simple photo handling and versioning site in KoaJs",
   "main": "app.js",
   "scripts": {
-    "test": "./node_module/mocha/bin/mocha -d bdd -r spec -b"
+    "test": "./node_modules/mocha/bin/mocha --harmony-generators -u bdd -R spec -b"
   },
   "repository": {
     "type": "git",
@@ -20,8 +20,13 @@
     "url": "https://github.com/marcusoftnet/foto-foto/issues"
   },
   "homepage": "https://github.com/marcusoftnet/foto-foto",
-  "dependencies" :{
-    "koa": "^0.5.0"
-    },
-  "devDependencies" :{ }
+  "dependencies": {
+    "koa": "*",
+    "koa-static": "^1.4.0"
+  },
+  "devDependencies": {
+    "mocha" : "*",
+    "should" : "*",
+    "supertest" : "*"
+  }
 }
