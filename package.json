@@ -26,7 +26,10 @@
     "koa-static": "^1.4.0",
     "koa-logger": "^1.1.0",
     "co-busboy": "^0.1.0",
-    "koa-route": "^1.0.2"
+    "koa-route": "^1.0.2",
+    "monk": "~0.7.1",
+    "co-monk": "~0.0.1",
+    "co" : "^3.0.0"
   },
   "devDependencies": {
     "mocha" : "*",

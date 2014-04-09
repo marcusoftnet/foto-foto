@@ -2,10 +2,16 @@
 var parse = require('co-busboy');
 var fs = require('fs');
 
-// Handlers
+// Set up monk stuff, via co-monk
+var monk = require('monk');
+var wrap = require('co-monk');
+var db = monk('localhost/foto-foto');
+var motives = wrap(db.get('motives'));
+module.exports.motivesCollection = motives;
+
+// Handlers ... maybe one per logical function?
 function *addMotive(){
 	var parts = parse(this);
-
 	var part;
 	var motive = {name: null, stream : null};
 
@@ -36,8 +42,18 @@ function *addMotive(){
 	}
 	else{
 		// Storage
-		this.status = 201;
+		motive.created_on = new Date;
+		motive.version = 1;
+		yield motives.insert(motive);
+
+		// Respond
+		this.redirect("/motive/" + motive.name)
 	}
 };
-
 module.exports.addMotive = addMotive;
+
+function *getMotive(name) {
+	this.body = "The name is: " + name;
+	this.status = 200;
+};
+module.exports.getMotive = getMotive;

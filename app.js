@@ -15,7 +15,8 @@ app.use(logger());
 app.use(serve(__dirname + '/public'));
 
 // routes
-app.use(route.post('/api/motive/new', motiveHandler.addMotive));
+app.use(route.post('/motive/new', motiveHandler.addMotive));
+app.use(route.get('/motive/:name', motiveHandler.getMotive));
 
 // fire it up
 app.listen(3456);
